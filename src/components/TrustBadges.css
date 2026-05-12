@@ -1,0 +1,71 @@
+.trust-badges {
+  background-color: var(--color-white);
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--color-bg-light);
+  transform: translateY(-40px); /* Overlap with hero slightly */
+  position: relative;
+  z-index: 10;
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .badges-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .badges-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.badge-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.badge-card:hover {
+  transform: translateY(-5px);
+}
+
+.badge-icon {
+  color: var(--color-secondary);
+  background: var(--color-bg-light);
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+}
+
+.badge-text {
+  font-size: 0.9rem;
+}
+@media (max-width: 768px) {
+  .trust-badges {
+    transform: translateY(0);
+    margin: 2rem 1.5rem;
+    padding: 2rem 0;
+  }
+}

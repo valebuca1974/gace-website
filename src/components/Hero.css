@@ -1,0 +1,444 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--color-primary) !important;
+  color: var(--color-white) !important;
+  /* Amplio espacio superior para que el Floating Header y el Logo no choquen con el título */
+  padding-top: 190px;
+  overflow: hidden;
+}
+
+/* Video removido según solicitud */
+
+/* Efecto de malla saliendo - patrón de diamantes que se desplaza */
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: -100%;
+  width: 200%;
+  height: 120px;
+  background: 
+    linear-gradient(135deg, transparent 33.33%, rgba(0, 174, 239, 0.1) 33.33%, rgba(0, 174, 239, 0.1) 66.66%, transparent 66.66%),
+    linear-gradient(225deg, transparent 33.33%, rgba(0, 174, 239, 0.1) 33.33%, rgba(0, 174, 239, 0.1) 66.66%, transparent 66.66%);
+  background-size: 40px 40px;
+  animation: mesh-flow 8s linear infinite;
+  z-index: 4;
+  pointer-events: none;
+  mask-image: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+}
+
+/* Overlay eliminado */
+
+@keyframes slow-zoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+/* -----------------------------------
+   NUEVO DISEÑO: DARK STUDIO B2B PREMIUM (CON MÁSCARA)
+-------------------------------------- */
+.hero {
+  /* Regresamos al glorioso Azul Corporativo Original */
+  background: var(--color-primary) !important; 
+  color: white !important; 
+}
+
+.hero-glow-background {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  width: 800px;
+  height: 800px;
+  /* Brillo sutil detrás del producto para resaltar la máscara */
+  background: radial-gradient(circle, rgba(147, 51, 234, 0.15) 0%, rgba(0, 174, 239, 0.05) 40%, transparent 70%);
+  transform: translate(-50%, -50%);
+  filter: blur(60px);
+  z-index: 1;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+  position: relative;
+  z-index: 4;
+}
+
+.hero-title {
+  color: white !important; 
+  font-weight: 900;
+}
+
+.hero-subtitle {
+  color: rgba(255, 255, 255, 0.8) !important; 
+  font-weight: 400;
+}
+
+/* Adaptando los botones y complementos al tema oscuro */
+.hero-badge {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.btn-outline {
+  border-color: white !important;
+  color: white !important;
+}
+
+.btn-outline:hover {
+  background-color: white !important;
+  color: var(--color-primary) !important;
+}
+
+.btn-subtext {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.social-proof {
+  background: rgba(255, 255, 255, 0.05);
+  border-left-color: var(--color-accent);
+}
+
+.social-proof p {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* El Escaparate "Light Studio" */
+.hero-product-container {
+  flex: 1;
+  position: relative;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+}
+
+.hero-product-img {
+  position: absolute;
+}
+
+/* La Poliburbuja Estratégica (Fondo Cinemático) */
+.hero-product-img.secondary-mesh {
+  width: 85%; 
+  height: 85%;
+  left: -20%; /* Desplazada hacia la izquierda para asomarse por detrás */
+  top: 5%;
+  object-fit: contain;
+  -webkit-mask-image: radial-gradient(ellipse at 50% 50%, black 40%, transparent 70%);
+  mask-image: radial-gradient(ellipse at 50% 50%, black 40%, transparent 70%);
+  /* Profundidad de campo: Desenfocada y oscurecida para NO robar protagonismo */
+  filter: blur(8px) contrast(0.9) brightness(0.6);
+  z-index: 1; /* Se sienta detrás de la malla principal */
+  animation: float-3d-slow 12s ease-in-out infinite alternate;
+}
+
+/* Malla Morada Protagonista */
+.hero-product-img.main-mesh {
+  width: 100%; 
+  height: 100%;
+  left: 5%; /* Ligeramente a la derecha para dar espacio a la poliburbuja */
+  object-fit: contain; 
+  /* MÁSCARA AJUSTADA: Elíptica, centrada, con suficiente espacio sólido (50%) 
+     para revelar TODA la malla sin cortes, difuminando solo el fondo gris sobrante. */
+  -webkit-mask-image: radial-gradient(ellipse at 50% 50%, black 50%, transparent 72%);
+  mask-image: radial-gradient(ellipse at 50% 50%, black 50%, transparent 72%);
+  
+  mix-blend-mode: normal; 
+  filter: contrast(1.15) brightness(1.1); 
+  z-index: 2; /* Siempre al frente */
+  animation: float-3d 8s ease-in-out infinite alternate;
+}
+
+.hero-floating-badges {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.hero-badge-float {
+  position: absolute;
+  background: rgba(20, 20, 40, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 100px;
+  /* Badges mucho MÁS GRANDES para destacar los casos de uso */
+  padding: 10px 24px 10px 10px; 
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  color: white;
+  font-weight: 700;
+  font-size: 1.15rem; /* Texto aumentado para máxima legibilidad */
+  letter-spacing: 0.5px;
+  animation: float-3d 6s ease-in-out infinite alternate;
+}
+
+.hero-badge-float img {
+  width: 80px; /* Tamaño del producto interno muy incrementado (antes 60px) */
+  height: 80px;
+  border-radius: 50%;
+  object-fit: contain; 
+  padding: 8px; /* Espacio interior para que el producto respire dentro del círculo */
+  background: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  mix-blend-mode: multiply; /* Limpia el fondo gris dentro de la burbuja blanca */
+}
+
+.badge-top {
+  top: 10%;
+  left: -15%;
+  animation-delay: 0s;
+}
+
+.badge-bottom {
+  bottom: 10%;
+  right: -5%;
+  animation-delay: -3s;
+}
+
+@keyframes float-3d {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-15px); }
+}
+
+@keyframes float-3d-slow {
+  0% { transform: translateY(0px) scale(0.95); }
+  100% { transform: translateY(-10px) scale(1); }
+}
+
+/* Eliminando collage anterior */
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+  backdrop-filter: blur(4px);
+}
+
+.live-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #2ED573;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 0 0 rgba(46, 213, 115, 0.7);
+  animation: pulse-dot 1.5s infinite var(--ease-out-cubic, ease-out);
+}
+
+@keyframes pulse-dot {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(46, 213, 115, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(46, 213, 115, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(46, 213, 115, 0); }
+}
+
+.hero-title {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  color: var(--color-white);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  color: var(--color-bg-light);
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+}
+
+.hero-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn-lg {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-white);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.btn-outline:hover {
+  border-color: var(--color-white);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-subtext {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+}
+
+.social-proof {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(0, 0, 0, 0.15);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--color-accent);
+  backdrop-filter: blur(4px);
+  max-width: fit-content;
+}
+
+.social-proof .stars {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+.social-proof p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+
+@media (max-width: 1024px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .hero-product-container {
+    width: 100%;
+    height: 500px;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 8rem;
+    min-height: auto;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    padding: 0 1.5rem;
+    order: 1;
+  }
+
+  .hero-title {
+    font-size: 2.1rem !important;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem !important;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 2rem;
+  }
+  
+  .hero-cta-group .btn {
+    width: 100%;
+    padding: 1rem !important;
+  }
+
+  .hero-product-container {
+    order: 2;
+    position: relative;
+    width: 100%;
+    height: 400px !important;
+    margin-top: 2rem;
+    display: block;
+    overflow: visible;
+  }
+
+  .hero-product-img.main-mesh {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90% !important;
+    height: auto !important;
+    max-height: 100%;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 10 !important;
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
+    filter: none !important;
+  }
+
+  .hero-product-img.secondary-mesh {
+    display: none;
+  }
+
+  .hero-floating-badges {
+    display: none;
+  }
+  
+  .social-proof {
+    order: 3;
+    margin: 2rem auto;
+    max-width: 90%;
+  }
+}

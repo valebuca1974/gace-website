@@ -1,0 +1,126 @@
+.differentiators {
+  padding-top: 6rem;
+  padding-bottom: 7rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Patrón de puntos para la textura de fondo */
+.differentiators::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.diff-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+.badge {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+}
+
+.diff-header {
+  max-width: 800px;
+  margin: 0 auto 4rem;
+}
+
+.differentiators .section-title {
+  color: var(--color-white);
+  font-size: 2.5rem;
+}
+
+.differentiators .section-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 4rem;
+}
+
+.diff-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.diff-item {
+  flex: 0 1 calc(33.333% - 2rem);
+  min-width: 280px;
+  max-width: 350px;
+  background: rgba(255, 255, 255, 0.05); /* Glassmorphism oscuro */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+.diff-item:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.diff-icon {
+  color: #64B5F6; /* Azul claro resaltado */
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.diff-title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--color-white);
+}
+
+.diff-desc {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+.diff-cta {
+  margin-top: 5rem;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.diff-cta p {
+  color: var(--color-white);
+  font-size: 1.1rem;
+}
+
+.diff-cta strong {
+  color: var(--color-accent);
+}
+
+@media (min-width: 768px) {
+  .diff-cta {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}

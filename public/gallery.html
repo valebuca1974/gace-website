@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualizador de Imágenes</title>
+    <style>
+        body { font-family: sans-serif; display: flex; flex-wrap: wrap; gap: 20px; padding: 20px; background: #f0f0f0; }
+        div { border: 1px solid #ccc; padding: 10px; background: white; border-radius: 8px; text-align: center; }
+        img { max-width: 300px; display: block; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <script>
+        for (let i = 1; i <= 16; i++) {
+            const container = document.createElement('div');
+            container.innerHTML = `
+                <img src="/webp-trimmed/CATÁLOGO GACE-${i}-0.webp" alt="${i}">
+                <p>CATÁLOGO GACE-${i}-0.webp</p>
+            `;
+            document.body.appendChild(container);
+        }
+    </script>
+</body>
+</html>
