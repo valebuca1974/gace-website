@@ -262,11 +262,12 @@
 }
 
 .hero-title {
-  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-size: clamp(2rem, 4.2vw, 3.2rem); /* Escala refinada para mejor equilibrio visual */
   color: var(--color-white);
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
-  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1.8rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
 }
 
 .hero-subtitle {
@@ -381,8 +382,8 @@
   }
 
   .hero-title {
-    font-size: 2.1rem !important;
-    margin-bottom: 1rem;
+    font-size: 2rem !important; /* Ajuste para equilibrio en móviles */
+    margin-bottom: 1.2rem;
   }
   
   .hero-subtitle {
