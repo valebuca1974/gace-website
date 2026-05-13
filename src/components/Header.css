@@ -57,7 +57,7 @@
 
 .logo-img {
   /* TAMAÑO ÓPTIMO: Grande para leer el eslogan, pero proporcionado al Pill */
-  height: 140px;
+  height: 120px;
   width: auto;
   object-fit: contain;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -76,7 +76,7 @@
 }
 
 .header.scrolled .logo-img {
-  height: 110px;
+  height: 95px;
 }
 
 .logo-text-hidden {
@@ -376,20 +376,40 @@
   }
 
   .logo-img {
-    height: 110px;
+    height: 95px;
+  }
+  
+  .logo-slogan {
+    font-size: 0.65rem;
+    margin-top: -10px;
   }
 
   .header.scrolled .logo-img {
-    height: 95px;
+    height: 85px;
+  }
+  
+  .header.scrolled .logo-slogan {
+    font-size: 0.55rem;
+    margin-top: -8px;
   }
 }
 
 @media (max-width: 400px) {
   .logo-img {
-    height: 100px;
+    height: 85px;
+  }
+  
+  .logo-slogan {
+    font-size: 0.6rem;
+    margin-top: -8px;
   }
 
   .header.scrolled .logo-img {
-    height: 85px;
+    height: 75px;
+  }
+  
+  .header.scrolled .logo-slogan {
+    font-size: 0.5rem;
+    margin-top: -5px;
   }
 }
