@@ -11,7 +11,7 @@ export default function SEO({ title, description, url }) {
     "@type": "Organization",
     "name": "GACE",
     "url": siteUrl,
-    "logo": `${siteUrl}/logo-gace-oficial-trimmed.png`,
+    "logo": `${siteUrl}/logo-gace-clean-final.png`,
     "description": defaultDescription,
     "telephone": "+525586763800",
     "email": "valebuca@gmail.com",
