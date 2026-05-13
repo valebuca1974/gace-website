@@ -54,11 +54,11 @@ export default function Hero() {
           
           <div className="hero-floating-badges">
             <div className="hero-badge-float badge-top">
-              <img src="/webp/CATÁLOGO GACE-12-0.webp" alt="Tequila" />
+              <img src="/webp/CATÁLOGO GACE-10-0.webp" alt="Coca Cola Packaging" />
               <span>Malla Protección</span>
             </div>
             <div className="hero-badge-float badge-bottom">
-              <img src="/webp/CATÁLOGO GACE-10-0.webp" alt="Coca Cola" />
+              <img src="/webp/CATÁLOGO GACE-16-0.webp" alt="Malla Industrial" />
               <span>Malla Reforzada</span>
             </div>
           </div>

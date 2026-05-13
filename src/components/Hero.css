@@ -181,22 +181,23 @@
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 100px;
-  /* Badges mucho MÁS GRANDES para destacar los casos de uso */
-  padding: 10px 24px 10px 10px; 
+  /* Badges optimizados para no robar protagonismo */
+  padding: 8px 18px 8px 8px; 
   display: flex;
   align-items: center;
-  gap: 16px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  gap: 12px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
   color: white;
-  font-weight: 700;
-  font-size: 1.15rem; /* Texto aumentado para máxima legibilidad */
+  font-weight: 600;
+  font-size: 0.95rem; /* Tamaño más B2B y equilibrado */
   letter-spacing: 0.5px;
   animation: float-3d 6s ease-in-out infinite alternate;
+  opacity: 0.9;
 }
 
 .hero-badge-float img {
-  width: 80px; /* Tamaño del producto interno muy incrementado (antes 60px) */
-  height: 80px;
+  width: 55px; /* Tamaño refinado */
+  height: 55px;
   border-radius: 50%;
   object-fit: contain; 
   padding: 8px; /* Espacio interior para que el producto respire dentro del círculo */
