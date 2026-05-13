@@ -35,7 +35,6 @@ export default function Header() {
   const navLinks = [
     { name: 'Inicio', href: '/' },
     { name: 'Productos', href: '/#productos', isDropdown: true },
-    { name: 'Calculadora', href: '/calculadora-poliburbuja', isInternal: true },
     { name: 'Aplicaciones', href: '/#aplicaciones' },
     { name: 'Nosotros', href: '/#nosotros' },
     { name: 'Contacto', href: '/#contacto' },
@@ -47,7 +46,7 @@ export default function Header() {
     <header className={`header ${isScrolled || isProductPage ? 'scrolled' : ''}`}>
       <div className="container header-container">
         <Link to="/" className="logo">
-          <img src="/logo-gace-oficial.png" alt="GACE - Empaques y embalaje de protección" className="logo-img" />
+          <img src="/logo-gace-final-transparent.png" alt="GACE - Empaques y embalaje de protección" className="logo-img" />
           <span className="logo-slogan">Empaques y embalaje de protección</span>
         </Link>
 

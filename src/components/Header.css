@@ -60,7 +60,7 @@
 }
 
 .logo-img {
-  height: 95px; /* Restaurado el tamaño grande para la jerarquía del logo */
+  height: 100px; /* Jerarquía recuperada */
   width: auto;
   object-fit: contain;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -96,16 +96,15 @@
 
 .logo-slogan {
   display: block;
-  font-family: 'Montserrat', 'Inter', system-ui, sans-serif;
+  font-family: 'Inter', 'Montserrat', sans-serif;
   font-size: 0.65rem;
   font-weight: 800;
-  letter-spacing: 0.03em;
-  color: #004791; /* Color azul idéntico al del logo GACE */
+  letter-spacing: 0.05em;
+  color: #004791; /* Azul corporativo idéntico */
   text-transform: uppercase;
-  margin-top: 4px;
+  margin-top: 2px;
   text-align: center;
   white-space: nowrap;
-  transition: all 0.3s ease;
 }
 
 /* =============================================
@@ -114,7 +113,7 @@
 .desktop-nav {
   display: none;
   align-items: center;
-  gap: 1.2rem; /* Reducido para dar espacio al logo ancho sin desfasar el botón */
+  gap: 1.5rem; /* Espacio equilibrado */
 }
 
 @media (min-width: 768px) {

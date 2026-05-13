@@ -28,7 +28,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <div className="footer-logo-container">
-              <img src="/logo-gace-no-slogan.png" alt="GACE - Empaques y embalaje de protección" className="footer-logo" />
+              <img src="/logo-gace-final-transparent.png" alt="GACE - Empaques y embalaje de protección" className="footer-logo" />
               <span className="footer-slogan">Empaques y embalaje de protección</span>
             </div>
             <p className="footer-desc">
