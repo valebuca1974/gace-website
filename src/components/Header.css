@@ -60,7 +60,7 @@
 }
 
 .logo-img {
-  height: 60px; /* Tamaño ajustado para logo-gace-oficial.png */
+  height: 95px; /* Restaurado el tamaño grande para la jerarquía del logo */
   width: auto;
   object-fit: contain;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -79,7 +79,7 @@
 }
 
 .header.scrolled .logo-img {
-  height: 50px;
+  height: 75px;
 }
 
 .logo-text-hidden {
@@ -99,8 +99,8 @@
   font-family: 'Montserrat', 'Inter', system-ui, sans-serif;
   font-size: 0.65rem;
   font-weight: 800;
-  letter-spacing: 0.04em;
-  color: #004ba0; /* Color exacto Azul GACE */
+  letter-spacing: 0.03em;
+  color: #004791; /* Color azul idéntico al del logo GACE */
   text-transform: uppercase;
   margin-top: 4px;
   text-align: center;
@@ -114,7 +114,7 @@
 .desktop-nav {
   display: none;
   align-items: center;
-  gap: 2rem;
+  gap: 1.2rem; /* Reducido para dar espacio al logo ancho sin desfasar el botón */
 }
 
 @media (min-width: 768px) {
@@ -393,7 +393,7 @@
   }
 
   .logo-img {
-    height: 55px;
+    height: 85px;
   }
   
   .logo-slogan {
@@ -402,7 +402,7 @@
   }
 
   .header.scrolled .logo-img {
-    height: 48px;
+    height: 70px;
   }
   
   .header.scrolled .logo-slogan {
@@ -413,7 +413,7 @@
 
 @media (max-width: 400px) {
   .logo-img {
-    height: 50px;
+    height: 75px;
   }
   
   .logo-slogan {
@@ -422,7 +422,7 @@
   }
 
   .header.scrolled .logo-img {
-    height: 42px;
+    height: 60px;
   }
   
   .header.scrolled .logo-slogan {
