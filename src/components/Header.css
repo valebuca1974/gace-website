@@ -65,8 +65,8 @@
   object-fit: contain;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   
-  /* SIN FILTROS: Mostramos el azul original de GACE */
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.05));
+  /* SIN FILTROS NI EFECTOS: Claridad total */
+  filter: none;
   opacity: 1;
   
   image-rendering: -webkit-optimize-contrast;

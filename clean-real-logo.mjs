@@ -15,12 +15,11 @@ async function processLogo() {
       const g = data[i+1];
       const b = data[i+2];
       
-      // Remover el checkerboard (píxeles blancos o grises claros donde R, G, B son similares)
-      const isGrayscale = Math.abs(r - g) < 15 && Math.abs(g - b) < 15 && Math.abs(r - b) < 15;
+      const isGrayscale = Math.abs(r - g) < 20 && Math.abs(g - b) < 20 && Math.abs(r - b) < 20;
       const isLight = r > 180 && g > 180 && b > 180;
       
       if (isGrayscale && isLight) {
-        data[i+3] = 0; // Transparente
+        data[i+3] = 0; 
       }
     }
 
@@ -32,9 +31,11 @@ async function processLogo() {
       }
     })
     .trim()
+    .sharpen({ sigma: 1, m1: 0, m2: 20 }) // Aumentar nitidez
+    .png({ quality: 100, compressionLevel: 9 })
     .toFile(outputPath);
 
-    console.log('Logo procesado impecablemente.');
+    console.log('Logo procesado con nitidez aumentada.');
   } catch (err) {
     console.error(err);
   }
