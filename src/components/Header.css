@@ -60,7 +60,7 @@
 }
 
 .logo-img {
-  height: 85px; /* Altura ideal para que no se corte y mantenga jerarquía */
+  height: 140px; /* Tamaño masivo para identidad de marca */
   width: auto;
   object-fit: contain;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -79,7 +79,7 @@
 }
 
 .header.scrolled .logo-img {
-  height: 65px;
+  height: 100px;
 }
 
 .logo-text-hidden {
@@ -96,13 +96,13 @@
 
 .logo-slogan {
   display: block;
-  font-family: 'Inter', 'Montserrat', sans-serif;
-  font-size: 0.65rem;
+  font-family: 'Montserrat', 'Inter', sans-serif;
+  font-size: 0.8rem; /* Más grande para jerarquía */
   font-weight: 800;
   letter-spacing: 0.05em;
-  color: #004791; /* Azul corporativo idéntico */
+  color: #004791;
   text-transform: uppercase;
-  margin-top: 8px; /* Espacio extra para evitar traslape con las letras GACE */
+  margin-top: 5px;
   text-align: center;
   white-space: nowrap;
 }
@@ -113,7 +113,7 @@
 .desktop-nav {
   display: none;
   align-items: center;
-  gap: 1.5rem; /* Espacio equilibrado */
+  gap: 2rem; /* Recuperado el espacio para evitar encimamiento */
 }
 
 @media (min-width: 768px) {
