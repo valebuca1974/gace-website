@@ -60,7 +60,7 @@
 }
 
 .logo-img {
-  height: 140px; /* Tamaño masivo para identidad de marca */
+  height: 160px; /* Ajustado para el nuevo logo vertical con eslogan */
   width: auto;
   object-fit: contain;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
