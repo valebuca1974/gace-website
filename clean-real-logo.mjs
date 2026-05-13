@@ -15,14 +15,14 @@ async function processLogo() {
       const g = data[i+1];
       const b = data[i+2];
       
-      const isGrayscale = Math.abs(r - g) < 15 && Math.abs(g - b) < 15 && Math.abs(r - b) < 15;
+      // Umbral más permisivo para el gris del checkerboard
+      const isGrayscale = Math.abs(r - g) < 25 && Math.abs(g - b) < 25 && Math.abs(r - b) < 25;
       const brightness = (r + g + b) / 3;
       
-      // Aplicamos un umbral suave para evitar bordes "serruchados" (pixeleados)
-      if (isGrayscale && brightness > 180) {
-        // Cuanto más blanco, más transparente, pero con transición suave (anti-aliasing)
-        const alpha = Math.max(0, Math.min(255, Math.floor((255 - brightness) * (255 / (255 - 180)))));
-        data[i+3] = alpha;
+      // Eliminamos agresivamente cualquier cosa que parezca el fondo (blanco/gris claro)
+      if (isGrayscale && brightness > 150) {
+        // Transparencia total para el fondo
+        data[i+3] = 0;
       }
     }
 
@@ -34,11 +34,11 @@ async function processLogo() {
       }
     })
     .trim()
-    .resize({ height: 400, kernel: 'lanczos3' }) // Redimensionado de alta calidad
+    .resize({ height: 480, kernel: 'lanczos3' })
     .png({ quality: 100, compressionLevel: 9 })
     .toFile(outputPath);
 
-    console.log('Logo procesado con anti-aliasing suavizado.');
+    console.log('Logo procesado con transparencia total y optimización senior.');
   } catch (err) {
     console.error(err);
   }
