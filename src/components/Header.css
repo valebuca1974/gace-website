@@ -94,18 +94,7 @@
   border: 0;
 }
 
-.logo-slogan {
-  display: block;
-  font-family: 'Montserrat', 'Inter', sans-serif;
-  font-size: 0.8rem; /* Más grande para jerarquía */
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  color: #004791;
-  text-transform: uppercase;
-  margin-top: 5px;
-  text-align: center;
-  white-space: nowrap;
-}
+/* Logo slogan removed as it is now part of the image */
 
 /* =============================================
    NAVEGACIÓN DESKTOP
