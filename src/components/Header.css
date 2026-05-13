@@ -60,7 +60,7 @@
 }
 
 .logo-img {
-  height: 160px; /* Ajustado para el nuevo logo vertical con eslogan */
+  height: 100px; /* Reducido ya que el eslogan ahora es texto externo */
   width: auto;
   object-fit: contain;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -78,8 +78,27 @@
   filter: none;
 }
 
+.logo-slogan-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: #1A4FA2; /* Azul corporativo GACE */
+  text-transform: none;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  text-align: center;
+  margin-top: -5px; /* Acercar al logo "GACE" de la imagen */
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
 .header.scrolled .logo-img {
-  height: 100px;
+  height: 70px;
+}
+
+.header.scrolled .logo-slogan-text {
+  font-size: 12px;
+  margin-top: -2px;
 }
 
 .logo-text-hidden {

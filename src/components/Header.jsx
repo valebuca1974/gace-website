@@ -47,6 +47,7 @@ export default function Header() {
       <div className="container header-container">
         <Link to="/" className="logo">
           <img src="/logo-gace-oficial.png" alt="GACE - Empaques y embalaje de protección" className="logo-img" />
+          <span className="logo-slogan-text">Empaques y Embalaje de Protección</span>
         </Link>
 
         {/* Desktop Nav */}

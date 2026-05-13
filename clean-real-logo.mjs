@@ -2,11 +2,9 @@ import sharp from 'sharp';
 
 async function processLogo() {
   try {
-    const inputPath = 'C:/Users/dean valentin/.gemini/antigravity/brain/af5f6434-a6d8-4aaf-87b2-c49ac49c10aa/media__1778645180440.jpg';
+    const inputPath = 'C:/Users/dean valentin/.gemini/antigravity/brain/af5f6434-a6d8-4aaf-87b2-c49ac49c10aa/media__1778647334953.jpg';
     const outputPath = 'public/logo-gace-oficial.png';
 
-    // Procesamos el logo para que tenga un tamaño optimizado (400px de alto es ideal para Retina)
-    // Usamos el filtro Lanczos para máxima nitidez en el reescalado.
     await sharp(inputPath)
       .ensureAlpha()
       .raw()
@@ -29,12 +27,12 @@ async function processLogo() {
           }
         })
         .trim()
-        .resize({ height: 480, kernel: 'lanczos3' }) // Tamaño optimizado para nitidez en web
+        .resize({ height: 480, kernel: 'lanczos3' })
         .png({ quality: 100, compressionLevel: 9 })
         .toFile(outputPath);
       });
 
-    console.log('Logo procesado con optimización de nitidez Lanczos3.');
+    console.log('Logo (sin slogan) procesado con éxito.');
   } catch (err) {
     console.error(err);
   }
