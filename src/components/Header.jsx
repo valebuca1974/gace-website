@@ -46,7 +46,7 @@ export default function Header() {
     <header className={`header ${isScrolled || isProductPage ? 'scrolled' : ''}`}>
       <div className="container header-container">
         <Link to="/" className="logo">
-          <img src="/logo-gace-clean-final.png" alt="GACE - Empaques y embalaje de protección" className="logo-img" />
+          <img src="/logo-gace-v3.png" alt="GACE - Empaques y embalaje de protección" className="logo-img" />
           <span className="logo-slogan">Empaques y embalaje de protección</span>
         </Link>
 

@@ -60,7 +60,7 @@
 }
 
 .logo-img {
-  height: 100px; /* Jerarquía recuperada */
+  height: 85px; /* Altura ideal para que no se corte y mantenga jerarquía */
   width: auto;
   object-fit: contain;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -79,7 +79,7 @@
 }
 
 .header.scrolled .logo-img {
-  height: 75px;
+  height: 65px;
 }
 
 .logo-text-hidden {
@@ -102,7 +102,7 @@
   letter-spacing: 0.05em;
   color: #004791; /* Azul corporativo idéntico */
   text-transform: uppercase;
-  margin-top: 2px;
+  margin-top: 8px; /* Espacio extra para evitar traslape con las letras GACE */
   text-align: center;
   white-space: nowrap;
 }
