@@ -52,16 +52,6 @@ export default function Hero() {
           {/* Malla Morada Protagonista */}
           <img src="/webp/CATÁLOGO GACE-8-0.webp" alt="Malla con Memoria para Ajos" className="hero-product-img main-mesh" />
           
-          <div className="hero-floating-badges">
-            <div className="hero-badge-float badge-top">
-              <img src="/webp/CATÁLOGO GACE-10-0.webp" alt="Coca Cola Packaging" />
-              <span>Malla Protección</span>
-            </div>
-            <div className="hero-badge-float badge-bottom">
-              <img src="/webp/CATÁLOGO GACE-16-0.webp" alt="Malla Industrial" />
-              <span>Malla Reforzada</span>
-            </div>
-          </div>
         </div>
       </div>
     </section>
