@@ -91,13 +91,15 @@
 
 .footer-slogan {
   display: block;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  color: #e2e8f0;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: #e2e8f0; /* Blanco tiza para que resalte en fondo oscuro */
   text-transform: uppercase;
   text-align: left;
-  margin-left: 5px;
+  margin-left: 2px;
+  margin-top: 5px;
 }
 
 .footer-logo:hover {
