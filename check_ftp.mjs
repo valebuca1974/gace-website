@@ -13,8 +13,8 @@ async function checkRemote() {
   try {
     console.log('Connecting...');
     await sftp.connect(config);
-    console.log('Connected. Listing /GACE directory:');
-    const list = await sftp.list('/GACE');
+    console.log('Connected. Listing / directory:');
+    const list = await sftp.list('/');
     for (const item of list) {
         console.log(`- ${item.name} (${item.type})`);
     }

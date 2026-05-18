@@ -16,10 +16,10 @@ export default function About() {
           <div className="about-content">
             <h2 className="section-title text-left">Nuestra Experiencia</h2>
             <p className="about-lead">
-              En GACE somos especialistas en la fabricación de mallas plásticas de alta resistencia, orgullosamente ubicados en México.
+              GACE Empaques y Embalajes de Protección es una empresa especializada en la fabricación de mallas plásticas extruidas tipo red en polietileno y polipropileno virgen para empaque y protección.
             </p>
             <p className="about-text">
-              Nuestra misión es proveer a la industria del embalaje, higiene y sector industrial con productos que solucionan problemas reales de protección, transporte y confort. Utilizamos materia prima de primera calidad y tecnología de extrusión avanzada para crear soluciones que cumplen con los estándares más exigentes del mercado.
+              Nuestra misión es satisfacer plenamente las necesidades de nuestros socios comerciales a través de servicios y productos para ampliar y garantizar el mercado. Somos el sistema de empaque ideal para proteger, promocionar y embalar productos en proceso, desarrollando mallas especiales acordes a las necesidades de cada cliente.
             </p>
             <div className="about-stats">
               <div className="stat">

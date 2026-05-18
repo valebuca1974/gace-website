@@ -16,7 +16,7 @@ export default function Hero() {
             Fabricación de Malla Plástica y Poliburbuja
           </h1>
           <p className="hero-subtitle">
-            Expertos en Poliburbuja y Mallas Plásticas de alta resistencia para embalaje, protección, higiene y sector agroalimentario. Fabricación directa por volumen.
+            GACE: Especialistas en la fabricación de mallas plásticas extruidas tipo red en polietileno y polipropileno virgen para el empaque y protección de sus productos en diversos sectores industriales.
           </p>
           <div className="hero-badge">
             <span className="live-dot"></span>

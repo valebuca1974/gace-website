@@ -23,7 +23,7 @@ export default function Contact() {
     try {
       // 🚀 INTEGRACIÓN PRO: Backend Interno (Vercel API)
       // Conectado directamente a nuestra propia API Serverless programada a la medida
-      const webhookUrl = '/api/contact.php';
+      const webhookUrl = '/api/contact';
       
       const payload = {
         lead_data: {
@@ -94,8 +94,9 @@ export default function Contact() {
                   <Mail size={24} />
                 </div>
                 <div>
-                  <h4>Correo Institucional</h4>
-                  <a href="mailto:direccion@gaceempaques.mx">direccion@gaceempaques.mx</a>
+                  <h4>Correos Institucionales</h4>
+                  <a href="mailto:direccion@gaceempaques.mx">direccion@gaceempaques.mx</a><br />
+                  <a href="mailto:facturacion@mallasplastic.com">facturacion@mallasplastic.com</a>
                 </div>
               </div>
               <div className="info-item">

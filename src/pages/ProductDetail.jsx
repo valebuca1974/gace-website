@@ -1,6 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { 
   ArrowLeft, 
   MessageCircle, 
@@ -23,6 +23,13 @@ export default function ProductDetail() {
   }, [slug]);
 
   const product = productsData.find(p => p.slug === slug);
+  const [activeImg, setActiveImg] = useState(product?.image);
+
+  useEffect(() => {
+    if (product) {
+      setActiveImg(product.image);
+    }
+  }, [product]);
   
   if (!product) {
     return <Navigate to="/" />;
@@ -81,8 +88,24 @@ export default function ProductDetail() {
             {/* LEFT COLUMN: VISUALS & SPECS */}
             <div className="pd-sheet-main">
               <div className="pd-sheet-product-row">
-                <div className="pd-sheet-image-box">
-                  <img src={product.image} alt={product.title} />
+                <div className="pd-sheet-image-section">
+                  <div className="pd-sheet-image-box">
+                    <img src={activeImg} alt={product.title} />
+                  </div>
+                  {product.images && product.images.length > 0 && (
+                    <div className="pd-sheet-gallery">
+
+                      {product.images.map((img, idx) => (
+                        <img 
+                          key={idx}
+                          src={img} 
+                          className={`pd-sheet-gallery-thumb ${activeImg === img ? 'active' : ''}`}
+                          onClick={() => setActiveImg(img)}
+                          alt={`${product.title} vista ${idx + 1}`}
+                        />
+                      ))}
+                    </div>
+                  )}
                 </div>
                 
                 <div className="pd-sheet-table-box">
