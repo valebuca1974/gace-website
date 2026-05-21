@@ -263,7 +263,7 @@
 }
 
 .hero-title {
-  font-size: clamp(2rem, 4.2vw, 3.2rem); /* Escala refinada para mejor equilibrio visual */
+  font-size: clamp(1.8rem, 3.6vw, 2.6rem); /* Ligeramente más pequeño para armonía con el logo */
   color: var(--color-white);
   line-height: 1.15;
   margin-bottom: 1.8rem;

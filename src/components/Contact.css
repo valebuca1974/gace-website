@@ -197,3 +197,50 @@
   width: 0;
   overflow: hidden;
 }
+
+/* B2B Form Select Dropdowns */
+.form-group select {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.2s;
+  background-color: #F9FAFB;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%239CA3AF'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.25rem;
+  cursor: pointer;
+  color: var(--color-text-dark);
+}
+
+.form-group select:hover {
+  border-color: #D1D5DB;
+}
+
+.form-group select:focus {
+  outline: none;
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 4px rgba(30, 136, 229, 0.15);
+  background-color: var(--color-white);
+}
+
+.form-row-b2b {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.form-group.half {
+  flex: 1;
+}
+
+@media (max-width: 576px) {
+  .form-row-b2b {
+    flex-direction: column;
+    gap: 0;
+  }
+}

@@ -3,7 +3,7 @@ import { MapPin, Phone, Mail, Send } from 'lucide-react';
 import './Contact.css';
 
 export default function Contact() {
-  const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '', fax: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '', fax: '', industry: '', volume: '' });
   const [submitStatus, setSubmitStatus] = useState(null); // 'sending', 'success', 'error'
 
   const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -23,7 +23,7 @@ export default function Contact() {
     try {
       // 🚀 INTEGRACIÓN PRO: Backend Interno (Vercel API)
       // Conectado directamente a nuestra propia API Serverless programada a la medida
-      const webhookUrl = '/api/contact';
+      const webhookUrl = 'https://web-fabrica-de-malla.vercel.app/api/contact';
       
       const payload = {
         lead_data: {
@@ -31,6 +31,8 @@ export default function Contact() {
           email: formData.email,
           phone: formData.phone,
           message: formData.message,
+          industry: formData.industry,
+          volume: formData.volume
         },
         metadata: {
           source_url: window.location.href,
@@ -51,7 +53,7 @@ export default function Contact() {
       
       if (response.ok || response.type === 'opaque') {
         setSubmitStatus('success');
-        setFormData({ name: '', email: '', phone: '', message: '' });
+        setFormData({ name: '', email: '', phone: '', message: '', fax: '', industry: '', volume: '' });
         setTimeout(() => setSubmitStatus(null), 5000);
       } else {
         setSubmitStatus('error');
@@ -94,9 +96,8 @@ export default function Contact() {
                   <Mail size={24} />
                 </div>
                 <div>
-                  <h4>Correos Institucionales</h4>
-                  <a href="mailto:direccion@gaceempaques.mx">direccion@gaceempaques.mx</a><br />
-                  <a href="mailto:facturacion@mallasplastic.com">facturacion@mallasplastic.com</a>
+                  <h4>Correo Institucional</h4>
+                  <a href="mailto:mariana.garcia@gaceempaques.mx">mariana.garcia@gaceempaques.mx</a>
                 </div>
               </div>
               <div className="info-item">
@@ -104,8 +105,9 @@ export default function Contact() {
                   <MapPin size={24} />
                 </div>
                 <div>
-                  <h4>Ubicación base</h4>
-                  <p>Envíos a todo México</p>
+                  <h4>Ubicación Comercial e Industrial</h4>
+                  <p style={{ lineHeight: '1.4' }}>Manuel Carrión y Rubio Mz. 154 Lt. 20 #103,<br/>Col. Santa Martha Acatitla Norte,<br/>Iztapalapa CDMX C.P. 09140</p>
+                  <p style={{ marginTop: '0.4rem', color: '#64B5F6', fontSize: '0.85rem', fontWeight: 'bold' }}>* Envíos a todo México</p>
                 </div>
               </div>
             </div>
@@ -133,6 +135,31 @@ export default function Contact() {
                 <label htmlFor="phone">Teléfono</label>
                 <input type="tel" id="phone" name="phone" placeholder="55 1234 5678" value={formData.phone} onChange={handleChange} />
               </div>
+              
+              <div className="form-row-b2b">
+                <div className="form-group half">
+                  <label htmlFor="industry">Giro o Sector Industrial</label>
+                  <select id="industry" name="industry" value={formData.industry} onChange={handleChange} required>
+                    <option value="" disabled>Seleccione una opción...</option>
+                    <option value="Agropecuario">Agrícola / Agropecuario</option>
+                    <option value="Empaque y Logistica">Embalaje / Logística / Envase</option>
+                    <option value="Higiene y Cuidado">Higiene / Cuidado Personal</option>
+                    <option value="Alimentos y Bebidas">Alimentos y Bebidas</option>
+                    <option value="Otro">Otro Giro Comercial</option>
+                  </select>
+                </div>
+                <div className="form-group half">
+                  <label htmlFor="volume">Volumen de Compra</label>
+                  <select id="volume" name="volume" value={formData.volume} onChange={handleChange} required>
+                    <option value="" disabled>Seleccione volumen...</option>
+                    <option value="Muestra / Prueba">Muestra o volumen de prueba</option>
+                    <option value="Pequeño (10-50 rollos)">Volumen bajo (10 a 50 rollos)</option>
+                    <option value="Medio (50-200 rollos)">Volumen B2B Medio (50 a 200 rollos)</option>
+                    <option value="Alto (Más de 200 rollos)">Gran volumen / Distribuidor</option>
+                  </select>
+                </div>
+              </div>
+
               <div className="form-group">
                 <label htmlFor="message">Mensaje / Especificaciones</label>
                 <textarea id="message" name="message" rows="4" placeholder="Describa el tipo de malla, cantidades y medidas que necesita..." value={formData.message} onChange={handleChange} required></textarea>
@@ -148,6 +175,20 @@ export default function Contact() {
               )}
             </form>
           </div>
+        </div>
+
+        {/* Google Maps Embed */}
+        <div className="contact-map-container" style={{ marginTop: '4rem', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.35)', border: '4px solid var(--color-white)', backgroundColor: 'var(--color-white)' }}>
+          <iframe 
+            src="https://maps.google.com/maps?q=Manuel+Carri%C3%B3n+y+Rubio+Mz.+154+Lt.+20+%23103,+Col.+Santa+Martha+Acatitla+Norte,+Iztapalapa+CDMX+C.P.+09140&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+            width="100%" 
+            height="400" 
+            style={{ border: 0, display: 'block' }} 
+            allowFullScreen="" 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Ubicación de GACE Industrial"
+          ></iframe>
         </div>
       </div>
     </section>

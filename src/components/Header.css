@@ -12,7 +12,7 @@
   max-width: 1200px;
   z-index: 1000;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 0.4rem 1.5rem;
+  padding: 0.4rem 1.5rem; /* Aumentado para dar espacio al logo de 120px */
   
   /* Floating Pill: Cristal blanco premium */
   background: rgba(255, 255, 255, 0.98);
@@ -48,73 +48,60 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
   z-index: 10;
-  border: none;
-  padding: 0.2rem 0;
-  flex-shrink: 0;
-  background: transparent;
   text-decoration: none;
+  padding: 0;
 }
 
 .logo-img {
-  height: 100px; /* Reducido ya que el eslogan ahora es texto externo */
+  height: 135px;
   width: auto;
   object-fit: contain;
+  display: block;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  
-  /* SIN FILTROS NI EFECTOS: Claridad total */
   filter: none;
   opacity: 1;
-  
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
+  flex-shrink: 0;
+  mix-blend-mode: multiply;
+  background-color: transparent;
 }
 
 .logo:hover .logo-img {
-  transform: none;
+  transform: scale(1.02);
   filter: none;
 }
 
-.logo-slogan-text {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  font-weight: 800;
-  color: #1A4FA2; /* Azul corporativo GACE */
-  text-transform: none;
-  letter-spacing: -0.01em;
+.logo-slogan {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.55rem;
+  font-weight: 700;
+  color: #123e93;
+  margin-top: 2px;
   line-height: 1.1;
-  text-align: center;
-  margin-top: 5px; /* Espacio limpio debajo de la marca GACE */
+  width: 99.5%;
+  display: block;
+  text-align: justify;
+  text-align-last: justify;
   white-space: nowrap;
-  letter-spacing: 0.02em;
-  transition: all 0.3s ease;
+  letter-spacing: -0.01em;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo:hover .logo-slogan {
+  color: var(--color-secondary);
 }
 
 .header.scrolled .logo-img {
-  height: 70px;
+  height: 105px;
 }
 
-.header.scrolled .logo-slogan-text {
-  font-size: 12px;
-  margin-top: -2px;
+.header.scrolled .logo-slogan {
+  font-size: 0.44rem;
+  margin-top: 1px;
 }
-
-.logo-text-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-/* Logo slogan removed as it is now part of the image */
 
 /* =============================================
    NAVEGACIÓN DESKTOP
@@ -391,50 +378,48 @@
   .header {
     width: 92%;
     top: 1rem;
-    padding: 0.5rem 1rem;
+    padding: 0.2rem 1rem;
     border-radius: 16px;
   }
 
   .header.scrolled {
     top: 0.5rem;
-    padding: 0.4rem 1rem;
+    padding: 0.15rem 1rem;
   }
 
   .logo-img {
-    height: 85px;
+    height: 80px;
   }
-  
+
   .logo-slogan {
-    font-size: 0.6rem;
-    margin-top: 3px;
+    font-size: 0.32rem;
+    margin-top: 2px;
   }
 
   .header.scrolled .logo-img {
-    height: 70px;
+    height: 65px;
   }
-  
+
   .header.scrolled .logo-slogan {
-    font-size: 0.55rem;
-    margin-top: 2px;
+    font-size: 0.26rem;
+    margin-top: 1px;
   }
 }
 
 @media (max-width: 400px) {
   .logo-img {
-    height: 75px;
+    height: 65px;
   }
-  
+
   .logo-slogan {
-    font-size: 0.55rem;
-    margin-top: 2px;
+    font-size: 0.26rem;
   }
 
   .header.scrolled .logo-img {
-    height: 60px;
+    height: 55px;
   }
-  
+
   .header.scrolled .logo-slogan {
-    font-size: 0.5rem;
-    margin-top: 2px;
+    display: none;
   }
 }

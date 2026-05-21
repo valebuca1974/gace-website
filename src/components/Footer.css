@@ -5,13 +5,12 @@
 }
 
 .footer-cta-premium {
-  background: var(--color-secondary); /* Vibrant Industrial Blue */
+  background: rgba(30, 136, 229, 0.1);
+  border: 1px solid rgba(30, 136, 229, 0.3);
   color: var(--color-white);
-  padding: 3rem 2rem;
-  border-radius: 16px;
-  margin-bottom: 4rem;
-  transform: translateY(-50px);
-  box-shadow: 0 20px 40px rgba(0, 123, 255, 0.25);
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 3rem;
   text-align: center;
   position: relative;
   z-index: 10;
@@ -19,22 +18,22 @@
 
 @media (min-width: 768px) {
   .footer-cta-premium {
-    padding: 4rem;
+    padding: 2.5rem 2rem;
   }
 }
 
 .cta-headline {
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  margin-bottom: 1rem;
-  font-weight: 800;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  margin-bottom: 0.75rem;
+  font-weight: 700;
   color: white;
   letter-spacing: -0.5px;
 }
 
 .cta-subheadline {
-  font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 2.5rem;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,7 +78,7 @@
 }
 
 .footer-logo {
-  height: 85px;
+  height: 65px;
   width: auto;
   object-fit: contain;
   transition: all 0.3s ease;
@@ -87,19 +86,6 @@
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
   margin-bottom: -5px;
-}
-
-.footer-slogan {
-  display: block;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.02em;
-  color: #e2e8f0; /* Blanco tiza para que resalte en fondo oscuro */
-  text-transform: uppercase;
-  text-align: left;
-  margin-left: 2px;
-  margin-top: 5px;
 }
 
 .footer-logo:hover {

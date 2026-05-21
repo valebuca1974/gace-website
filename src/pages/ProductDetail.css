@@ -374,3 +374,315 @@
   .pd-sheet-details-row { grid-template-columns: 1fr; }
   .pd-sheet-title { font-size: 1.8rem; }
 }
+
+/* ===== PREMIUM GATED DOWNLOAD MODAL ===== */
+
+.pd-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.75); /* Deep slate overlay */
+  backdrop-filter: blur(8px); /* Premium blurry background */
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: pdFadeIn 0.3s ease-out forwards;
+}
+
+.pd-modal-content {
+  background: #ffffff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 580px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+  border: 1px solid #cbd5e1;
+  position: relative;
+  overflow: hidden;
+  animation: pdSlideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.pd-modal-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: #f1f5f9;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.pd-modal-close:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+  transform: rotate(90deg);
+}
+
+.pd-modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.pd-modal-header {
+  padding: 2.25rem 2.25rem 1.5rem 2.25rem;
+  background: #f8fafc;
+  background-image: 
+    linear-gradient(rgba(0, 174, 239, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 174, 239, 0.04) 1px, transparent 1px);
+  background-size: 20px 20px; /* Tech blueprint grid matching brand */
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.pd-modal-lock-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(26, 54, 93, 0.08);
+  color: #1a365d;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 0.75rem;
+}
+
+.pd-modal-header h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin: 0 0 0.4rem 0;
+}
+
+.pd-modal-header p {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.pd-modal-body {
+  padding: 1.75rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.pd-modal-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.pd-modal-group label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #334155;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pd-modal-group input,
+.pd-modal-group select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  font-size: 0.95rem;
+  color: #0f172a;
+  background-color: #ffffff;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.pd-modal-group input:focus,
+.pd-modal-group select:focus {
+  outline: none;
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 3px rgba(0, 174, 239, 0.15);
+}
+
+.pd-modal-group input::placeholder {
+  color: #94a3b8;
+}
+
+.pd-modal-input-icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.pd-modal-input-icon-wrapper svg {
+  position: absolute;
+  left: 1rem;
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+.pd-modal-input-icon-wrapper input {
+  padding-left: 2.5rem;
+}
+
+.pd-modal-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.pd-modal-footer {
+  padding: 1.5rem 2.25rem 2.25rem 2.25rem;
+  border-top: 1px solid #f1f5f9;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.pd-modal-submit-btn {
+  background: var(--color-secondary);
+  color: white;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pd-modal-submit-btn:hover:not(:disabled) {
+  background: var(--color-primary);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 174, 239, 0.2);
+}
+
+.pd-modal-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.pd-modal-error-msg {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #ef4444;
+  text-align: center;
+  margin: 0;
+}
+
+.pd-modal-security-text {
+  font-size: 0.7rem;
+  color: #94a3b8;
+  text-align: center;
+  margin: 0;
+}
+
+/* SUCCESS STATE */
+.pd-modal-success-state {
+  padding: 4rem 2.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pd-modal-success-icon {
+  color: #10b981;
+  margin-bottom: 1.5rem;
+  animation: pdScaleCheck 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.pd-modal-success-state h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin: 0 0 0.5rem 0;
+}
+
+.pd-modal-success-state p {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.5;
+  margin: 0 0 2rem 0;
+  max-width: 400px;
+}
+
+.pd-modal-success-loader {
+  width: 100%;
+  max-width: 240px;
+  height: 4px;
+  background: #e2e8f0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.pd-loader-bar {
+  height: 100%;
+  background: #10b981;
+  width: 0%;
+  animation: pdLoadProgress 2.2s linear forwards;
+}
+
+/* ANIMATIONS */
+@keyframes pdFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pdSlideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pdScaleCheck {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes pdLoadProgress {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+/* RESPONSIVE MODAL */
+@media (max-width: 600px) {
+  .pd-modal-overlay {
+    padding: 1rem;
+  }
+  .pd-modal-content {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  .pd-modal-header {
+    padding: 1.75rem 1.5rem 1.25rem 1.5rem;
+  }
+  .pd-modal-body {
+    padding: 1.25rem 1.5rem;
+    gap: 1rem;
+  }
+  .pd-modal-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .pd-modal-footer {
+    padding: 1.25rem 1.5rem 1.75rem 1.5rem;
+  }
+  .pd-modal-success-state {
+    padding: 3rem 1.5rem;
+  }
+}
+

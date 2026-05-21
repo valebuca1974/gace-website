@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.gace.com.mx/sitemap.xml
+Sitemap: https://gaceempaques.mx/sitemap.xml

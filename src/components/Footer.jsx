@@ -28,8 +28,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <div className="footer-logo-container">
-              <img src="/logo-gace-final-transparent.png" alt="GACE - Empaques y embalaje de protección" className="footer-logo" />
-              <span className="footer-slogan">Empaques y embalaje de protección</span>
+              <img src="/logo-gace-clean.png" alt="GACE - Empaques y Embalajes de Protección" className="footer-logo" />
             </div>
             <p className="footer-desc">
               <strong>GACE Industrial:</strong> Especialistas en la fabricación de soluciones de embalaje y protección de alta resistencia. Orgullosamente Mexicanos.
@@ -40,7 +39,7 @@ export default function Footer() {
             <h4>Navegación</h4>
             <ul className="footer-links">
               <li><a href="/#inicio">Inicio</a></li>
-              <li><a href="/#productos">Catálogo de Productos</a></li>
+              <li><a href="/#malla">Catálogo de Productos</a></li>
               <li><a href="/#aplicaciones">Aplicaciones Industriales</a></li>
               <li><a href="/#nosotros">Sobre GACE</a></li>
               <li><a href="/#contacto">Contacto Directo</a></li>

@@ -31,7 +31,7 @@ export default function Hero() {
               <span className="btn-subtext">Respuesta en menos de 5 min</span>
             </div>
             <div className="btn-wrapper">
-              <a href="#productos" className="btn btn-outline btn-lg">
+              <a href="#malla" className="btn btn-outline btn-lg">
                 Explorar catálogo
               </a>
             </div>

@@ -16,7 +16,7 @@ async function deploy() {
     await sftp.connect(config);
     console.log('Connected!');
 
-    const localPath = path.resolve(process.cwd(), 'dist');
+    const localPath = 'c:\\Users\\dean valentin\\Desktop\\WEB FABRICA DE MALLA\\dist';
     const remotePath = '/GACE';
 
     console.log(`Uploading ${localPath} to ${remotePath}...`);

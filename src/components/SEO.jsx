@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 export default function SEO({ title, description, url }) {
   const defaultTitle = 'GACE | Fabricación de Malla Plástica y Poliburbuja en México';
   const defaultDescription = 'Fabricantes directos de mallas plásticas (reforzada, suave, protección), poliburbuja y polifom. Soluciones para industria, agro y empaque en México.';
-  const siteUrl = url || 'https://www.gace.com.mx';
+  const siteUrl = url || 'https://gaceempaques.mx';
 
   // Schema Markup for LocalBusiness / Organization
   const schemaMarkup = {
@@ -14,7 +14,7 @@ export default function SEO({ title, description, url }) {
     "logo": `${siteUrl}/logo-gace-final-transparent.png`,
     "description": defaultDescription,
     "telephone": "+525586763800",
-    "email": "valebuca@gmail.com",
+    "email": "mariana.garcia@gaceempaques.mx",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "MX"

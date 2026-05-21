@@ -1,13 +1,17 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { productsData } from '../data/products';
 import './Header.css';
 
+const mallasData = productsData.filter(p => p.category === 'Mallas' || p.category === 'Accesorios');
+const poliburbujaData = productsData.filter(p => p.category === 'Embalaje' || p.category === 'Retail y Oficina');
+
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [productsOpen, setProductsOpen] = useState(false);
+  const [mallaOpen, setMallaOpen] = useState(false);
+  const [poliOpen, setPoliOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -18,27 +22,18 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Use location directly without effect to close menu (standard React pattern)
-  const prevLocation = useRef(location.pathname);
-  if (prevLocation.current !== location.pathname) {
-    prevLocation.current = location.pathname;
-    if (mobileMenuOpen) setMobileMenuOpen(false);
-    if (productsOpen) setProductsOpen(false);
+  // Cerrar menú móvil al cambiar de ruta (Sincronización durante el renderizado)
+  const [prevPath, setPrevPath] = useState(location.pathname);
+  if (location.pathname !== prevPath) {
+    setPrevPath(location.pathname);
+    setMobileMenuOpen(false);
+    setMallaOpen(false);
+    setPoliOpen(false);
   }
 
   const toggleMenu = () => setMobileMenuOpen(!mobileMenuOpen);
-  const toggleProductsMobile = (e) => {
-    e.preventDefault();
-    setProductsOpen(!productsOpen);
-  };
-
-  const navLinks = [
-    { name: 'Inicio', href: '/' },
-    { name: 'Productos', href: '/#productos', isDropdown: true },
-    { name: 'Aplicaciones', href: '/#aplicaciones' },
-    { name: 'Nosotros', href: '/#nosotros' },
-    { name: 'Contacto', href: '/#contacto' },
-  ];
+  const toggleMallaMobile = (e) => { e.preventDefault(); setMallaOpen(!mallaOpen); setPoliOpen(false); };
+  const togglePoliMobile = (e) => { e.preventDefault(); setPoliOpen(!poliOpen); setMallaOpen(false); };
 
   const isProductPage = location.pathname.startsWith('/producto/');
 
@@ -46,38 +41,41 @@ export default function Header() {
     <header className={`header ${isScrolled || isProductPage ? 'scrolled' : ''}`}>
       <div className="container header-container">
         <Link to="/" className="logo">
-          <img src="/logo-gace-final-transparent.png" alt="GACE - Empaques y embalaje de protección" className="logo-img" />
-          <span className="logo-slogan-text">Empaques y Embalaje de Protección</span>
+          <img src="/logo-gace-clean.png" alt="GACE" className="logo-img" />
+          <span className="logo-slogan">Empaques y Embalajes de Protección.</span>
         </Link>
 
         {/* Desktop Nav */}
         <nav className="desktop-nav">
           <ul className="nav-list">
-            {navLinks.map((link) => (
-              <li key={link.name} className={link.isDropdown ? 'dropdown-item' : ''}>
-                {link.isDropdown ? (
-                  <button className="nav-link dropdown-toggle">
-                    {link.name} <ChevronDown size={14} />
-                  </button>
-                ) : link.isInternal ? (
-                  <Link to={link.href} className="nav-link">{link.name}</Link>
-                ) : (
-                  <a href={link.href} className="nav-link">{link.name}</a>
-                )}
-                
-                {link.isDropdown && (
-                  <ul className="dropdown-menu">
-                    {productsData.map(p => (
-                      <li key={p.id}>
-                        <Link to={`/producto/${p.slug}`} className="dropdown-link">
-                          {p.title}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            ))}
+            <li><a href="/" className="nav-link">Inicio</a></li>
+            <li className="dropdown-item">
+              <button className="nav-link dropdown-toggle">
+                Malla <ChevronDown size={14} />
+              </button>
+              <ul className="dropdown-menu">
+                {mallasData.map(p => (
+                  <li key={p.id}>
+                    <Link to={`/producto/${p.slug}`} className="dropdown-link">{p.title}</Link>
+                  </li>
+                ))}
+              </ul>
+            </li>
+            <li className="dropdown-item">
+              <button className="nav-link dropdown-toggle">
+                Poliburbuja <ChevronDown size={14} />
+              </button>
+              <ul className="dropdown-menu">
+                {poliburbujaData.map(p => (
+                  <li key={p.id}>
+                    <Link to={`/producto/${p.slug}`} className="dropdown-link">{p.title}</Link>
+                  </li>
+                ))}
+              </ul>
+            </li>
+            <li><a href="/#aplicaciones" className="nav-link">Aplicaciones</a></li>
+            <li><a href="/#nosotros" className="nav-link">Nosotros</a></li>
+            <li><a href="/#contacto" className="nav-link">Contacto</a></li>
           </ul>
           <a href="/#contacto" className="btn btn-primary">Cotizar ahora</a>
         </nav>
@@ -91,38 +89,42 @@ export default function Header() {
       {/* Mobile Nav */}
       <div className={`mobile-nav ${mobileMenuOpen ? 'open' : ''}`}>
         <ul className="mobile-nav-list">
-          {navLinks.map((link) => (
-            <li key={link.name}>
-              {link.isDropdown ? (
-                <>
-                  <div className="mobile-dropdown-header" onClick={toggleProductsMobile}>
-                    <span className="mobile-nav-link">{link.name}</span>
-                    <ChevronDown size={20} className={productsOpen ? 'rotate' : ''} />
-                  </div>
-                  <ul className={`mobile-dropdown-menu ${productsOpen ? 'show' : ''}`}>
-                    {productsData.map(p => (
-                      <li key={p.id}>
-                        <Link 
-                          to={`/producto/${p.slug}`} 
-                          className="mobile-dropdown-link"
-                        >
-                          {p.title}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              ) : link.isInternal ? (
-                <Link to={link.href} className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>
-                  {link.name}
-                </Link>
-              ) : (
-                <a href={link.href} className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>
-                  {link.name}
-                </a>
-              )}
-            </li>
-          ))}
+          <li>
+            <a href="/" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Inicio</a>
+          </li>
+          <li>
+            <div className="mobile-dropdown-header" onClick={toggleMallaMobile}>
+              <span className="mobile-nav-link">Malla</span>
+              <ChevronDown size={20} className={mallaOpen ? 'rotate' : ''} />
+            </div>
+            <ul className={`mobile-dropdown-menu ${mallaOpen ? 'show' : ''}`}>
+              {mallasData.map(p => (
+                <li key={p.id}>
+                  <Link to={`/producto/${p.slug}`} className="mobile-dropdown-link" onClick={() => setMobileMenuOpen(false)}>
+                    {p.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </li>
+          <li>
+            <div className="mobile-dropdown-header" onClick={togglePoliMobile}>
+              <span className="mobile-nav-link">Poliburbuja</span>
+              <ChevronDown size={20} className={poliOpen ? 'rotate' : ''} />
+            </div>
+            <ul className={`mobile-dropdown-menu ${poliOpen ? 'show' : ''}`}>
+              {poliburbujaData.map(p => (
+                <li key={p.id}>
+                  <Link to={`/producto/${p.slug}`} className="mobile-dropdown-link" onClick={() => setMobileMenuOpen(false)}>
+                    {p.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </li>
+          <li><a href="/#aplicaciones" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Aplicaciones</a></li>
+          <li><a href="/#nosotros" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Nosotros</a></li>
+          <li><a href="/#contacto" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Contacto</a></li>
           <li>
             <a href="/#contacto" className="btn btn-primary" style={{ width: '100%', marginTop: '1rem' }}>
               Cotizar ahora

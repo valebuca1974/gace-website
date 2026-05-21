@@ -56,7 +56,7 @@ export const productsData = [
     whatsappMsg: "Solicito cotización de Poliburbuja con corte (30, 40 o 60 cm).",
     seo: {
       title: "Venta de Poliburbuja con Corte 30, 40, 60 cm | GACE",
-      description: "Poliburbuja cortada a medidas of 30, 40 y 60 cms. Calibres 1/2 y 3/16 para embalaje técnico. Fabricantes directos."
+      description: "Poliburbuja cortada a medidas de 30, 40 y 60 cms. Calibres 1/2 y 3/16 para embalaje técnico. Fabricantes directos."
     }
   },
   {
@@ -118,11 +118,11 @@ export const productsData = [
     }
   },
   {
-    id: "malla-normal",
-    slug: "malla-plastica-normal",
-    title: "Malla Plástica Normal",
+    id: "malla-frutas-verduras",
+    slug: "malla-para-frutas-y-verduras",
+    title: "Malla para Frutas y Verduras",
     category: "Mallas",
-    image: "/webp/CATÁLOGO GACE-7-0.webp",
+    image: "/FOTOS PAGINA GACE/MALLA FRUTAS Y VERDURAS/5511c041-8fcc-4fa7-98f5-d61f8cddf32f.jpg",
     images: [
       "/webp/CATÁLOGO GACE-7-0.webp",
       "/FOTOS PAGINA GACE/MALLA FRUTAS Y VERDURAS/5511c041-8fcc-4fa7-98f5-d61f8cddf32f.jpg",
@@ -130,22 +130,7 @@ export const productsData = [
       "/FOTOS PAGINA GACE/MALLA FRUTAS Y VERDURAS/8700f280-8725-4b0c-9f4e-ae2b56ac89cf.jpg",
       "/FOTOS PAGINA GACE/MALLA FRUTAS Y VERDURAS/977a9cd1-7e08-4c20-ab63-f3006c70f764 (1).jpg",
       "/FOTOS PAGINA GACE/MALLA FRUTAS Y VERDURAS/c0c70697-2de5-43ce-8306-e2a3d272ef8b.jpg",
-      "/FOTOS PAGINA GACE/MALLA PARA JUGUETES/1ddac238-f1af-4876-97e3-5bf10601b751.jpg",
-      "/FOTOS PAGINA GACE/MALLA PARA JUGUETES/390fe4f8-428a-4f70-92b2-60c829cd7bce.jpg",
-      "/FOTOS PAGINA GACE/MALLA PARA JUGUETES/41284ab3-8a07-4df3-9602-9c8542638351.jpg",
-      "/FOTOS PAGINA GACE/MALLA PARA JUGUETES/89623545-2925-4906-9bfb-64b14a0fab7a.jpg",
-      "/FOTOS PAGINA GACE/MALLA PARA JUGUETES/9cb41355-73b6-40f6-825f-893c165598b8.jpg",
-      "/FOTOS PAGINA GACE/MALLA PARA JUGUETES/Photoroom_20260128_130932.jpg",
-      "/FOTOS PAGINA GACE/MALLA PARA JUGUETES/b01c9888-46c5-4794-85e5-299ce55a4951.jpg",
-      "/FOTOS PAGINA GACE/MALLA PARA PROMOCIONALES/050d4d0d-8db5-4f44-bed8-a6d1ccee7376.jpg",
-      "/FOTOS PAGINA GACE/MALLA PARA PROMOCIONALES/2b12d98e-e01b-4554-b1dc-74b3b5d27ce1.jpg",
-      "/FOTOS PAGINA GACE/MALLA PARA PROMOCIONALES/87c2ac81-2bf6-4fd8-914c-c1b928a11554.jpg",
-      "/FOTOS PAGINA GACE/MALLA PARA PROMOCIONALES/Photoroom_20260205_085015.jpg",
-      "/FOTOS PAGINA GACE/MALLA PARA PROMOCIONALES/Photoroom_20260205_085051.jpg",
-      "/FOTOS PAGINA GACE/MALLA PARA PROMOCIONALES/a56ce292-263e-4933-a78b-a57c4c781bb6.jpg",
-      "/FOTOS PAGINA GACE/PRESENTACION EN ROLLO/03b1448e-e8f3-42a3-9ae4-6d54bf15e6ba.jpg",
-      "/FOTOS PAGINA GACE/PRESENTACION EN ROLLO/044c81de-e946-4478-88e9-b5473f011138.jpg",
-      "/malla-normal-real.png"
+      "/FOTOS PAGINA GACE/PRESENTACION EN ROLLO/03b1448e-e8f3-42a3-9ae4-6d54bf15e6ba.jpg"
     ],
     features: [
       "Abertura: de 20, 30, 40, 45 cms.",
@@ -154,14 +139,17 @@ export const productsData = [
       "Colores de línea: Natural, rojo, amarillo, azul, naranja, verde, morado, oro y negro. (Fabricación en colores especiales.)"
     ],
     applications: [
-      "Promocionales (Latas, cajas, envases, lácteos, carnes, embutidos, industria química)",
-      "Frutas y Verduras (Limón, aguacate, cebolla, chiles, naranjas, tomate, pepino, nuez)",
-      "Juguetes (Pelotas, carritos, canicas, cubos, piezas de plástico)"
+      "Limón",
+      "Aguacate",
+      "Cebolla",
+      "Chiles",
+      "Naranjas",
+      "Tomate",
+      "Pepino",
+      "Nuez"
     ],
     benefits: [
-      "Aporta visibilidad y ventilación del producto",
-      "Fácil de utilizar y remover",
-      "Adaptable a procesos manuales o automatizados",
+      "Adaptable a procesos manuales o automatizados.",
       "Alta resistencia",
       "Empaca los productos sin dañarlos"
     ],
@@ -172,10 +160,105 @@ export const productsData = [
       { name: "Abertura 45cm", length: "500/1000", unit: "m" }
     ],
     colors: ["Natural", "Rojo", "Amarillo", "Azul", "Naranja", "Verde", "Morado", "Oro", "Negro"],
-    whatsappMsg: "Información sobre Malla Plástica Normal.",
+    whatsappMsg: "Hola GACE, me interesa cotizar Malla para Frutas y Verduras.",
     seo: {
-      title: "Malla Plástica para Frutas y Juguetes | Proveedor GACE",
-      description: "Malla plástica para empaque de alimentos y juguetes. Aberturas de 20 a 45 cm en diversos colores. Calidad GACE."
+      title: "Malla para Frutas y Verduras al Mayoreo | Fábrica GACE",
+      description: "Proveedor de malla plástica para frutas y verduras. Rollos de 500 y 1000m en rojo, amarillo y verde. Calidad alimentaria directa de fábrica."
+    }
+  },
+  {
+    id: "malla-juguetes",
+    slug: "malla-para-juguetes",
+    title: "Malla para Juguetes",
+    category: "Mallas",
+    image: "/FOTOS PAGINA GACE/MALLA PARA JUGUETES/1ddac238-f1af-4876-97e3-5bf10601b751.jpg",
+    images: [
+      "/webp/CATÁLOGO GACE-7-0.webp",
+      "/FOTOS PAGINA GACE/MALLA PARA JUGUETES/1ddac238-f1af-4876-97e3-5bf10601b751.jpg",
+      "/FOTOS PAGINA GACE/MALLA PARA JUGUETES/390fe4f8-428a-4f70-92b2-60c829cd7bce.jpg",
+      "/FOTOS PAGINA GACE/MALLA PARA JUGUETES/41284ab3-8a07-4df3-9602-9c8542638351.jpg",
+      "/FOTOS PAGINA GACE/MALLA PARA JUGUETES/89623545-2925-4906-9bfb-64b14a0fab7a.jpg",
+      "/FOTOS PAGINA GACE/MALLA PARA JUGUETES/9cb41355-73b6-40f6-825f-893c165598b8.jpg",
+      "/FOTOS PAGINA GACE/MALLA PARA JUGUETES/Photoroom_20260128_130932.jpg",
+      "/FOTOS PAGINA GACE/MALLA PARA JUGUETES/b01c9888-46c5-4794-85e5-299ce55a4951.jpg",
+      "/FOTOS PAGINA GACE/PRESENTACION EN ROLLO/044c81de-e946-4478-88e9-b5473f011138.jpg"
+    ],
+    features: [
+      "Abertura: de 20, 30, 40, 45 cms.",
+      "Presentaciones: Rollo de 500 y 1,000 mts. lineales.",
+      "Formatos: Bolsa sellada por un lado lista para su uso, Tramo cortado.",
+      "Colores de línea: Natural, rojo, amarillo, azul, naranja, verde, morado, oro y negro. (Fabricación en colores especiales.)"
+    ],
+    applications: [
+      "Pelotas de plástico",
+      "Carritos de juguete",
+      "Bloques y cubos de construcción",
+      "Canicas",
+      "Kits de playa"
+    ],
+    benefits: [
+      "Adaptable a procesos manuales o automatizados.",
+      "Alta resistencia",
+      "Empaca los productos sin dañarlos"
+    ],
+    variants: [
+      { name: "Abertura 20cm", length: "500/1000", unit: "m" },
+      { name: "Abertura 30cm", length: "500/1000", unit: "m" },
+      { name: "Abertura 40cm", length: "500/1000", unit: "m" },
+      { name: "Abertura 45cm", length: "500/1000", unit: "m" }
+    ],
+    colors: ["Natural", "Rojo", "Amarillo", "Azul", "Naranja", "Verde", "Morado", "Oro", "Negro"],
+    whatsappMsg: "Hola GACE, quiero cotizar Malla plástica para empaque de Juguetes.",
+    seo: {
+      title: "Malla para Juguetes y Pelotas al Mayoreo | GACE",
+      description: "Malla plástica para envasado de juguetes, canicas and pelotas plásticas. Colores llamativos en rollos de 500 y 1000m. Envío a todo México."
+    }
+  },
+  {
+    id: "malla-promocionales",
+    slug: "malla-para-promocionales",
+    title: "Malla para Promocionales",
+    category: "Mallas",
+    image: "/FOTOS PAGINA GACE/MALLA PARA PROMOCIONALES/050d4d0d-8db5-4f44-bed8-a6d1ccee7376.jpg",
+    images: [
+      "/webp/CATÁLOGO GACE-7-0.webp",
+      "/FOTOS PAGINA GACE/MALLA PARA PROMOCIONALES/050d4d0d-8db5-4f44-bed8-a6d1ccee7376.jpg",
+      "/FOTOS PAGINA GACE/MALLA PARA PROMOCIONALES/2b12d98e-e01b-4554-b1dc-74b3b5d27ce1.jpg",
+      "/FOTOS PAGINA GACE/MALLA PARA PROMOCIONALES/87c2ac81-2bf6-4fd8-914c-c1b928a11554.jpg",
+      "/FOTOS PAGINA GACE/MALLA PARA PROMOCIONALES/Photoroom_20260205_085015.jpg",
+      "/FOTOS PAGINA GACE/MALLA PARA PROMOCIONALES/Photoroom_20260205_085051.jpg",
+      "/FOTOS PAGINA GACE/MALLA PARA PROMOCIONALES/a56ce292-263e-4933-a78b-a57c4c781bb6.jpg",
+      "/FOTOS PAGINA GACE/PRESENTACION EN ROLLO/316287b5-4f1e-46eb-bf8c-1b3bd48a7123.jpg"
+    ],
+    features: [
+      "Abertura: de 20, 30, 40, 45 cms.",
+      "Presentaciones: Rollo de 500 y 1,000 mts. lineales.",
+      "Formatos: Bolsa sellada por un lado lista para su uso, Tramo cortado.",
+      "Colores de línea: Natural, rojo, amarillo, azul, naranja, verde, morado, oro y negro. (Fabricación en colores especiales.)"
+    ],
+    applications: [
+      "Paquetes de latas",
+      "Kits de cosméticos",
+      "Packs de botellas y envases",
+      "Lácteos y derivados",
+      "Muestras de industria química"
+    ],
+    benefits: [
+      "Adaptable a procesos manuales o automatizados.",
+      "Alta resistencia",
+      "Empaca los productos sin dañarlos"
+    ],
+    variants: [
+      { name: "Abertura 20cm", length: "500/1000", unit: "m" },
+      { name: "Abertura 30cm", length: "500/1000", unit: "m" },
+      { name: "Abertura 40cm", length: "500/1000", unit: "m" },
+      { name: "Abertura 45cm", length: "500/1000", unit: "m" }
+    ],
+    colors: ["Natural", "Rojo", "Amarillo", "Azul", "Naranja", "Verde", "Morado", "Oro", "Negro"],
+    whatsappMsg: "Hola GACE, me interesa cotizar Malla Plástica para Promocionales y Kits.",
+    seo: {
+      title: "Malla para Kits Promocionales y Packs 2x1 | GACE",
+      description: "Proveedor de malla plástica para ofertas y kits promocionales. Empaca botellas, cosméticos y latas con visibilidad. Venta de rollos por mayoreo."
     }
   },
   {
@@ -189,7 +272,6 @@ export const productsData = [
       "/FOTOS PAGINA GACE/MALLA CON MEMORIA/19e38868-50c9-44ef-8152-48858ca4b9de.jpg",
       "/FOTOS PAGINA GACE/MALLA CON MEMORIA/397fce8c-e5c8-44b3-9c81-86f15463e60d.jpg",
       "/FOTOS PAGINA GACE/MALLA CON MEMORIA/c5a314cc-4c86-4524-b2fa-273462ba2e1e.jpg",
-      "/FOTOS PAGINA GACE/PRESENTACION EN ROLLO/316287b5-4f1e-46eb-bf8c-1b3bd48a7123.jpg",
       "/FOTOS PAGINA GACE/PRESENTACION EN ROLLO/35d110ea-84e5-4e33-8113-a9e0ad760a6c.jpg"
     ],
     features: [
@@ -200,10 +282,9 @@ export const productsData = [
     ],
     applications: ["Ajos", "Flores", "Frutas y verduras", "Cosméticos"],
     benefits: [
-      "Se ajusta automáticamente a la forma de su producto",
-      "Adaptable a procesos manuales o automatizados",
+      "Adaptable a procesos manuales o automatizados.",
       "Ideal para productos frágiles",
-      "Brinda excelente ventilación"
+      "Se adapta al producto dando ventilación"
     ],
     variants: [
       { name: "Abertura 10cm", length: "500/1000", unit: "m" },
@@ -226,17 +307,17 @@ export const productsData = [
       "/webp/CATÁLOGO GACE-9-0.webp",
       "/FOTOS PAGINA GACE/MALLA SUAVE/21fc39be-5a88-4068-9d9b-f8a8e16185e7.jpg",
       "/FOTOS PAGINA GACE/MALLA SUAVE/6d23b335-a6d4-4c83-8007-405809df20c6.jpg",
-      "/FOTOS PAGINA GACE/MALLA SUAVE/9ff9023c-936b-472f-b5b1-6f1a9d35e49f.jpg"
+      "/FOTOS PAGINA GACE/MALLA SUAVE/9ff9023c-936b-472f-b5b1-6f1a9d35e49f.jpg",
+      "/FOTOS PAGINA GACE/PRESENTACION EN ROLLO/50bbf8b8-8c9b-4741-86c8-584de507d07a.jpg"
     ],
     features: [
       "Abertura: de 35 cms.",
       "Presentaciones: Rollo de 500 y 1,000 mts. lineales.",
       "Formatos: Tramo cortado.",
-      "Colores: Gama en colores especiales y tonalidades pastel."
+      "Colores de línea: Gama en colores especiales y tonalidades pastel"
     ],
     applications: ["Borlas corporales para ducha", "Faciales", "Cuidado diario de la piel"],
     benefits: [
-      "Suavidad extrema especial",
       "Ayuda a exfoliar y eliminar células muertas",
       "Opción para productos promocionales de cuidado personal"
     ],
@@ -264,12 +345,11 @@ export const productsData = [
       "/FOTOS PAGINA GACE/MALLA DE PROTECCION/Photoroom_20260128_140401.jpg",
       "/FOTOS PAGINA GACE/MALLA DE PROTECCION/Photoroom_20260129_045952.jpg",
       "/FOTOS PAGINA GACE/MALLA DE PROTECCION/Photoroom_20260204_231331.jpg",
-      "/FOTOS PAGINA GACE/PRESENTACION EN ROLLO/50bbf8b8-8c9b-4741-86c8-584de507d07a.jpg",
       "/FOTOS PAGINA GACE/PRESENTACION EN ROLLO/67a57386-4e8c-426c-90bb-4ace1e3d7a20.jpg"
     ],
     features: [
       "Abertura: de 2 cms, 4 cms, 7 cms, 8 cms, 10 cms, 12 cms.",
-      "Presentaciones: Rollo de 500 mts, 50 mts, 30 mts, lineales según sea la abertura.",
+      "Presentaciones: Rollo de 500 mts, 50 mts, 30 mts, lineales según sea la abertura",
       "Formatos: Tramo cortado.",
       "Colores de línea: Natural, rojo, azul. (Fabricación en colores especiales.)"
     ],
@@ -284,7 +364,7 @@ export const productsData = [
     ],
     benefits: [
       "Malla resistente a impactos y presión",
-      "Adaptable a producto (Flexible y ajustable)",
+      "Adaptable a producto",
       "Fácil de manipular y aplicar"
     ],
     variants: [
@@ -314,8 +394,7 @@ export const productsData = [
       "/FOTOS PAGINA GACE/MALLA REFORZADA/2cc87893-12e9-494a-ba47-bf89568e877e.jpg",
       "/FOTOS PAGINA GACE/MALLA REFORZADA/Photoroom_20260205_085332.jpg",
       "/FOTOS PAGINA GACE/MALLA REFORZADA/e366ccb0-76a5-48b6-8c6d-73012418c54d.jpg",
-      "/FOTOS PAGINA GACE/PRESENTACION EN ROLLO/8400ec97-2505-49e4-8a3d-2e1465ca974b.jpg",
-      "/FOTOS PAGINA GACE/PRESENTACION EN ROLLO/cc18e446-1043-4ab3-bc25-53a5806aa3c6.jpg"
+      "/FOTOS PAGINA GACE/PRESENTACION EN ROLLO/8400ec97-2505-49e4-8a3d-2e1465ca974b.jpg"
     ],
     features: [
       "Abertura: de 40, 45, 50, 60, 70 cms",
@@ -335,9 +414,9 @@ export const productsData = [
       "Refrescos tamaño familiar"
     ],
     benefits: [
-      "Mayor resistencia para cargar peso",
-      "Adaptable a procesos manuales o automatizados",
-      "Alta resistencia (Empaca sin dañarlos)",
+      "Adaptable a procesos manuales o automatizados.",
+      "Alta resistencia",
+      "Empaca los productos sin dañarlos",
       "Ventilación a productos que lo necesiten"
     ],
     variants: [
@@ -359,11 +438,12 @@ export const productsData = [
     slug: "malla-para-arbol-navideño",
     title: "Malla Para Árbol de Navidad",
     category: "Mallas",
-    image: "/webp/CATÁLOGO GACE-13-0.webp",
+    image: "/malla-navidad-real.png",
     images: [
-      "/webp/CATÁLOGO GACE-13-0.webp",
+      "/malla-navidad-real.png",
       "/webp/CATÁLOGO GACE-14-0.webp",
-      "/malla-navidad-real.png"
+      "/webp/CATÁLOGO GACE-13-0.webp",
+      "/FOTOS PAGINA GACE/PRESENTACION EN ROLLO/cc18e446-1043-4ab3-bc25-53a5806aa3c6.jpg"
     ],
     features: [
       "Abertura: de 80, 90, 100, 110 cms.",
@@ -373,8 +453,7 @@ export const productsData = [
     ],
     applications: ["Árboles de navidad", "Pelotas playeras", "Juguetes", "Productos jumbo"],
     benefits: [
-      "Ideal para cubrir o empaque de árboles y productos jumbo",
-      "Adaptable a procesos manuales o automatizados",
+      "Adaptable a procesos manuales o automatizados.",
       "Alta resistencia"
     ],
     variants: [
@@ -404,14 +483,13 @@ export const productsData = [
       "/FOTOS PAGINA GACE/TIPOS DE BROCHE/Photoroom_20260205_090149.JPG"
     ],
     features: [
-      "Modelo Campana: Permite añadir etiqueta de propaganda",
-      "Modelo Triángulo Asa: Ideal para productos pesados y de rotación",
-      "Rango de temperatura: -10 °C hasta 70°C"
+      "Broche Campana: Temperatura de uso de -10 °C hasta los 70°C. Tipo de broche al que se les puede añadir una etiqueta de propaganda al momento de ensamblarlo.",
+      "Triángulo Asa: Temperatura de uso de -10 °C hasta los 70°C. Este tipo de broche es ideal para productos pesados y de rotación.",
+      "Colocación: Aporta presentación al producto, este tipo de artículos se colocan en forma manual."
     ],
     benefits: [
-      "Aportan excelente presentación al producto",
-      "Colocación en forma manual",
-      "Sujeción segura para mallas"
+      "Aporta presentación al producto",
+      "Colocación en forma manual"
     ],
     variants: [
       { name: "Modelo Campana", length: "Manual", unit: "" },
